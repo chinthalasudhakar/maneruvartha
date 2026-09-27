@@ -218,6 +218,44 @@
     <footer>
         <p>&copy; 2026 మానేరు వార్త. సర్వహక్కులు ప్రత్యేకించబడ్డాయి.</p>
     </footer>
+<!-- పేపర్ క్లిప్పింగ్ డౌన్‌లోడ్ బటన్ -->
+<div style="text-align: center; margin: 25px 0 15px;">
+    <button onclick="downloadAsPaperImage(this)" style="background: linear-gradient(135deg, #8b0000, #b22222); color: #fff; font-size: 15px; font-weight: bold; padding: 12px 24px; border: none; border-radius: 30px; cursor: pointer; box-shadow: 0 4px 12px rgba(139,0,0,0.35); display: inline-flex; align-items: center; justify-content: center; gap: 8px;">
+        📥 పేపర్ క్లిప్పింగ్ డౌన్‌లోడ్ చేసుకోండి (HD)
+    </button>
+</div>
+
+<!-- డౌన్‌లోడ్ స్క్రిప్ట్ -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script>
+function downloadAsPaperImage(btn) {
+    const card = document.querySelector('.news-card') || document.querySelector('.main-container');
+    if (!card) {
+        alert("వార్త కార్డు కనిపించలేదు!");
+        return;
+    }
+    const originalText = btn.innerHTML;
+    btn.innerHTML = "⏳ ఇమేజ్ సిద్ధమవుతోంది...";
+    btn.disabled = true;
+
+    html2canvas(card, {
+        scale: 2,
+        useCORS: true,
+        backgroundColor: '#ffffff'
+    }).then(canvas => {
+        const link = document.createElement('a');
+        link.download = 'Maneru-Vartha-News.png';
+        link.href = canvas.toDataURL('image/png');
+        link.click();
+        btn.innerHTML = originalText;
+        btn.disabled = false;
+    }).catch(err => {
+        alert("డౌన్‌లోడ్ చేయడంలో సమస్య వచ్చింది. దయచేసి మళ్లీ ప్రయత్నించండి.");
+        btn.innerHTML = originalText;
+        btn.disabled = false;
+    });
+}
+</script>
 
 </body>
 </html>
