@@ -5,25 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>మానేరు వార్త</title>
     <style>
-        body { font-family: sans-serif; margin: 0; padding: 0; background: #f8f9fa; }
-        header { background: #b30000; color: white; padding: 20px; text-align: center; }
-        .container { padding: 20px; text-align: center; }
-        .card { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin-top: 20px; }
-        h1 { margin: 0; font-size: 26px; }
-        p { color: #444; font-size: 16px; }
+        body { font-family: sans-serif; margin: 0; padding: 0; background: #f4f4f4; color: #222; }
+        header { background: #b30000; color: white; padding: 15px; text-align: center; }
+        header h1 { margin: 0; font-size: 26px; }
+        header p { margin: 5px 0 0; font-size: 14px; color: #ffd6d6; }
+        .container { max-width: 600px; margin: 0 auto; padding: 15px; }
+        .section-title { font-size: 18px; border-left: 4px solid #b30000; padding-left: 8px; margin: 15px 0 10px; color: #b30000; font-weight: bold; }
+        .news-card { background: white; border-radius: 8px; padding: 15px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .news-date { font-size: 12px; color: #777; margin-bottom: 6px; }
+        .news-card h3 { margin: 0 0 8px; font-size: 18px; color: #111; line-height: 1.4; }
+        .news-card p { margin: 0; font-size: 14px; line-height: 1.6; color: #444; }
+        footer { text-align: center; padding: 15px; font-size: 12px; color: #777; background: #eee; margin-top: 20px; }
     </style>
 </head>
 <body>
+
     <header>
         <h1>మానేరు వార్త</h1>
-        <p style="color: #ffcccc; margin-top: 5px;">తాజా మరియు నిష్పక్షపాత వార్తలు</p>
+        <p>నిష్పక్షపాత వార్తల వేదిక</p>
     </header>
+
     <div class="container">
-        <div class="card">
-            <h2>వెబ్‌సైట్‌కు స్వాగతం!</h2>
-            <p>మానేరు వార్త అధికారిక వెబ్‌సైట్ త్వరలోనే పూర్తి వార్తలతో అందుబాటులోకి వస్తుంది.</p>
+        <div class="section-title">తాజా వార్తలు</div>
+
+        <!-- 1వ వార్త -->
+        <div class="news-card">
+            <div class="news-date">తేదీ: 27 సెప్టెంబర్ 2026</div>
+            </h3>జాతీయ రహదారి పై పొంచి ఉన్న ప్రమాదం </h3>
+            <p>భూపాలపల్లి -కాళేశ్వరం జాతీయ రహదారి 353c పైన ముళ్ల చెట్లు కంపలు రోడ్డు మీదకి వచ్చి ద్విచక్ర వాహదారులకు చాలా ఇబ్బంది గా ఉండి తీవ్ర ప్రమాదం జరిగే అవకాశం ఉంది .</p>
         </div>
+
+        <!-- 2వ వార్త -->
+        <div class="news-card">
+            <div class="news-date">తేదీ: 27 సెప్టెంబర్ 2026</div>
+            <h3>ఇక్కడ రెండవ వార్త ముఖ్యాంశం రాయండి</h3>
+            <p>ఇక్కడ రెండవ వార్త వివరణను టైప్ చేయండి.</p>
+        </div>
+
     </div>
+
+    <footer>
+        © 2026 మానేరు వార్త. All Rights Reserved.
+    </footer>
+
 </body>
 </html>
-
