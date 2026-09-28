@@ -4,232 +4,258 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>మానేరు వార్త - ప్రజా గొంతుక</title>
-    <!-- ఫాంట్ లింక్ -->
     <link href="https://fonts.googleapis.com/css2?family=Mandali&family=Ramabhadra&display=swap" rel="stylesheet">
     <style>
-        * { box-sizing: border-box; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
-            background-color: #c9c3b8;
+            background-color: #f0f2f5;
             font-family: 'Mandali', sans-serif;
-            display: flex;
-            justify-content: center;
-            padding: 15px 8px;
-            margin: 0;
+            color: #111;
         }
-        /* పత్రిక క్లిప్పింగ్ బోర్డర్ */
-        .paper-clipping {
-            background: #faf6ea;
-            max-width: 580px;
-            width: 100%;
-            padding: 16px;
-            border: 2px dashed #444;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-            position: relative;
-        }
-        /* పత్రిక హెడర్ & లోగో */
-        .paper-header {
+
+        /* 1. పైన మెరూన్ బ్యానర్ & లోగో */
+        .top-header {
+            background: linear-gradient(180deg, #800000 0%, #600000 100%);
             text-align: center;
-            border-bottom: 3px double #111;
-            padding-bottom: 8px;
-            margin-bottom: 10px;
+            padding: 15px 10px 10px 10px;
         }
-        .logo-emblem {
-            display: inline-block;
-            background: #b71c1c;
+        .main-logo {
+            width: 140px;
+            max-width: 40%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+        }
+
+        /* 2. కేటగిరీ మెనూ బార్ */
+        .nav-bar {
+            background-color: #1a1a1a;
+            display: flex;
+            overflow-x: auto;
+            white-space: nowrap;
+            padding: 10px 15px;
+            gap: 20px;
+            scrollbar-width: none;
+        }
+        .nav-bar::-webkit-scrollbar { display: none; }
+        .nav-bar a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .nav-bar a.active {
+            color: #ffcc00;
+        }
+
+        /* 3. బ్రేకింగ్ న్యూస్ స్క్రోలర్ */
+        .ticker-wrap {
+            display: flex;
+            align-items: center;
+            background-color: #fff2e0;
+            border-bottom: 2px solid #e0c8a8;
+            padding: 4px 10px;
+            font-size: 14px;
+        }
+        .ticker-badge {
+            background-color: #b71c1c;
             color: #fff;
+            font-weight: bold;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 13px;
+            margin-right: 10px;
+            white-space: nowrap;
+        }
+        .ticker-text {
+            color: #8a3b00;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-weight: bold;
+        }
+
+        /* 4. ప్రధాన వార్త కంటైనర్ */
+        .container {
+            max-width: 600px;
+            margin: 15px auto;
+            padding: 0 10px 30px 10px;
+        }
+        .news-card {
+            background: #ffffff;
+            border-radius: 8px;
+            border-top: 4px solid #b71c1c;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            padding: 16px;
+        }
+
+        .category-tag {
+            display: inline-block;
+            background-color: #b71c1c;
+            color: white;
             font-size: 13px;
             font-weight: bold;
-            padding: 3px 12px;
-            border-radius: 20px;
-            letter-spacing: 1px;
-            margin-bottom: 4px;
+            padding: 4px 10px;
+            border-radius: 3px;
+            margin-bottom: 8px;
         }
-        .paper-title {
-            font-family: 'Ramabhadra', sans-serif;
-            font-size: 32px;
-            font-weight: 900;
-            color: #b71c1c;
-            margin: 2px 0 0 0;
-            line-height: 1.1;
-            text-shadow: 1px 1px 0px #000;
+
+        .news-date {
+            color: #666;
+            font-size: 13px;
+            margin-bottom: 12px;
+            font-weight: 500;
         }
-        .paper-tagline {
-            font-size: 14px;
-            font-weight: bold;
-            color: #222;
-            margin-bottom: 6px;
-            letter-spacing: 0.5px;
-        }
-        .paper-meta {
-            border-top: 1px solid #222;
-            border-bottom: 1px solid #222;
-            padding: 4px 6px;
-            font-size: 11px;
-            font-weight: bold;
-            color: #333;
-            display: flex;
-            justify-content: space-between;
-            background-color: #f0ece0;
-        }
-        /* వార్తా శీర్షిక */
-        .headline-box {
-            text-align: center;
-            margin: 12px 0;
-            border-bottom: 1px solid #aaa;
-            padding-bottom: 8px;
-        }
+
         h1 {
             font-family: 'Ramabhadra', sans-serif;
-            font-size: 21px;
-            line-height: 1.35;
+            font-size: 22px;
+            line-height: 1.45;
             color: #000;
-            margin: 0 0 4px 0;
+            margin-bottom: 14px;
         }
-        .sub-headline {
-            font-size: 15px;
-            color: #b71c1c;
-            font-weight: bold;
-            margin: 0;
-        }
-        /* ఫోటో శైలి */
-        .news-photo-box {
-            text-align: center;
-            margin: 10px 0;
-        }
-        .news-photo-box img {
+
+        .featured-img-wrap {
             width: 100%;
-            max-height: 380px;
-            object-fit: cover;
-            border: 1px solid #444;
-            padding: 2px;
-            background: #fff;
+            margin-bottom: 14px;
         }
-        .caption {
-            font-size: 12px;
-            color: #444;
-            margin-top: 4px;
-            font-weight: bold;
-        }
-        /* వార్త కథనం (కాలమ్స్) */
-        .news-body {
-            font-size: 15px;
-            line-height: 1.8;
-            color: #111;
-            text-align: justify;
-            text-justify: inter-word;
-        }
-        .reporter {
-            font-weight: bold;
-            color: #000;
-            border-bottom: 1px dotted #555;
-        }
-        /* షేరింగ్ విభాగం */
-        .share-container {
-            margin-top: 18px;
-            padding-top: 12px;
-            border-top: 2px dashed #999;
-            text-align: center;
-        }
-        .share-label {
-            font-size: 13px;
-            font-weight: bold;
-            color: #333;
-            margin-bottom: 8px;
+        .featured-img-wrap img {
+            width: 100%;
+            height: auto;
+            border-radius: 6px;
             display: block;
         }
-        .share-buttons {
+
+        .news-text {
+            font-size: 16px;
+            line-height: 1.85;
+            color: #222;
+            text-align: justify;
+        }
+        .news-text p {
+            margin-bottom: 12px;
+        }
+        .reporter-badge {
+            font-weight: bold;
+            color: #b71c1c;
+        }
+
+        /* 5. వాట్సాప్ మరియు సోషల్ షేరింగ్ */
+        .share-box {
+            margin-top: 20px;
+            padding: 14px;
+            background-color: #fafafa;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            text-align: center;
+        }
+        .share-box span {
+            font-size: 14px;
+            font-weight: bold;
+            color: #444;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .share-btn-group {
             display: flex;
-            gap: 8px;
+            gap: 10px;
             justify-content: center;
-            flex-wrap: wrap;
         }
         .btn {
-            border: none;
-            padding: 7px 14px;
-            border-radius: 5px;
-            font-size: 13px;
-            font-weight: bold;
-            cursor: pointer;
             text-decoration: none;
+            padding: 9px 16px;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: bold;
+            color: #fff;
+            border: none;
+            cursor: pointer;
             display: inline-flex;
             align-items: center;
-            gap: 5px;
-            color: #fff;
+            gap: 6px;
         }
-        .btn-whatsapp { background-color: #25D366; }
-        .btn-copy { background-color: #333; }
-        .footer-note {
-            font-size: 11px;
-            color: #666;
-            margin-top: 10px;
+        .btn-wa { background-color: #25D366; }
+        .btn-copy { background-color: #333333; }
+
+        /* ఫూటర్ */
+        .footer {
             text-align: center;
+            margin-top: 25px;
+            font-size: 12px;
+            color: #777;
         }
     </style>
 </head>
 <body>
 
-    <div class="paper-clipping">
-        
-        <!-- హెడర్ & లోగో -->
-        <div class="paper-header">
-            <div class="logo-emblem">★ ప్రత్యేకం ★</div>
-            <div class="paper-title">మానేరు వార్త</div>
-            <div class="paper-tagline">ప్రజా గొంతుక • నిరంతర ప్రజా పక్షం</div>
-            <div class="paper-meta">
-                <span>తేదీ: 28 సెప్టెంబర్ 2026</span>
-                <span>డిజిటల్ ఎడిషన్</span>
-                <span>పోర్టల్: Reg. No. MV-2026</span>
-            </div>
-        </div>
+    <!-- 1. టాప్ హెడర్ లోగో -->
+    <header class="top-header">
+        <img src="logo.png" alt="మానేరు వార్త లోగో" class="main-logo">
+    </header>
 
-        <!-- ప్రధాన శీర్షిక -->
-        <div class="headline-box">
-            <h1>జాతీయ రహదారిపై పొంచి ఉన్న ప్రమాదం</h1>
-            <p class="sub-headline">రోడ్డుపైకి విస్తరిస్తున్న ముళ్లపొదలు.. పట్టించుకోని అధికారులు!</p>
-        </div>
+    <!-- 2. కేటగిరీ నావిగేషన్ -->
+    <nav class="nav-bar">
+        <a href="#" class="active">తాజా వార్తలు</a>
+        <a href="#">తెలంగాణ</a>
+        <a href="#">జిల్లా వార్తలు</a>
+        <a href="#">రాజకీయం</a>
+        <a href="#">క్రైమ్</a>
+    </nav>
 
-        <!-- ఫోటో -->
-        <div class="news-photo-box">
-            <img src="IMG_20260928_062704.jpg" alt="రహదారిపై పిచ్చిచెట్లు">
-            <div class="caption">▲ మలుపుల వద్ద రోడ్డుపైకి విస్తరించిన ముళ్లపొదలు</div>
-        </div>
-
-        <!-- వార్త కథనం -->
-        <div class="news-body">
-            <p><span class="reporter">మానేరు ప్రతినిధి:</span> జాతీయ రహదారిపై ప్రయాణం రోజురోజుకూ ప్రమాదకరంగా మారుతోంది. రహదారికి ఇరువైపులా ఏపుగా పెరిగిన ముళ్లచెట్లు, పిచ్చిమొక్కలు రోడ్డుపైకి విస్తరిస్తుండటంతో వాహనదారులు తీవ్ర భయాందోళన వ్యక్తం చేస్తున్నారు.</p>
-            
-            <p>ముఖ్యంగా మలుపుల వద్ద రోడ్డుపైకి చొచ్చుకువచ్చిన చెట్ల కొమ్మల కారణంగా ఎదురుగా వచ్చే వాహనాలు సరిగ్గా కనిపించక నిత్యం చిన్నపాటి ప్రమాదాలు జరుగుతున్నాయి. రాత్రి వేళల్లో ద్విచక్ర వాహనదారులు రోడ్డు అంచున ఉన్న ఈ పొదలను గమనించలేక ప్రమాదాల బారిన పడుతున్నారు.</p>
-            
-            <p>ఇప్పటికైనా సంబంధిత అధికారులు వెంటనే స్పందించి, రోడ్డుకి ఇరువైపులా ఉన్న పిచ్చిపొదలను పూర్తిగా తొలగించి వాహనదారులకు రక్షణ కల్పించాలని స్థానిక ప్రజలు, ప్రయాణికులు విజ్ఞప్తి చేస్తున్నారు.</p>
-        </div>
-
-        <!-- వాట్సాప్ షేర్ & లింక్ కాపీ -->
-        <div class="share-container">
-            <span class="share-label">ఈ వార్తను ఇతరులతో పంచుకోండి (Share):</span>
-            <div class="share-buttons">
-                <a id="waShare" href="#" target="_blank" class="btn btn-whatsapp">
-                    🟢 WhatsApp లో షేర్ చేయండి
-                </a>
-                <button onclick="copyCurrentLink()" class="btn btn-copy">
-                    📋 లింక్ కాపీ చేయండి
-                </button>
-            </div>
-            <div class="footer-note">మానేరు వార్త డిజిటల్ నెట్‌వర్క్ | maneruvartha-</div>
-        </div>
-
+    <!-- 3. బ్రేకింగ్ న్యూస్ స్క్రోలర్ -->
+    <div class="ticker-wrap">
+        <span class="ticker-badge">బ్రేకింగ్</span>
+        <span class="ticker-text">జాతీయ రహదారిపై పిచ్చిమొక్కల కారణంగా వాహనదారుల ఇబ్బందులు..</span>
     </div>
 
-    <!-- షేరింగ్ స్క్రిప్ట్ -->
-    <script>
-        const currentUrl = window.location.href;
-        const shareText = encodeURIComponent("జాతీయ రహదారిపై పొంచి ఉన్న ప్రమాదం - మానేరు వార్త ప్రత్యేక కథనం చూడండి:\n" + currentUrl);
-        document.getElementById("waShare").href = "https://api.whatsapp.com/send?text=" + shareText;
+    <!-- 4. వార్తా వివరాలు -->
+    <main class="container">
+        <article class="news-card">
+            <span class="category-tag">ప్రధాన వార్త</span>
+            <div class="news-date">తేదీ: 28 సెప్టెంబర్ 2026 | భూపాలపల్లి, తెలంగాణ</div>
 
-        function copyCurrentLink() {
-            navigator.clipboard.writeText(currentUrl).then(() => {
-                alert("వార్త లింక్ కాపీ అయింది! ఎవరికైనా షేర్ చేయవచ్చు.");
-            }).catch(() => {
-                prompt("ఈ లింక్‌ను కాపీ చేసుకోండి:", currentUrl);
+            <h1>జాతీయ రహదారిపై పొంచి ఉన్న ప్రమాదం.. రోడ్డుపైకి విస్తరిస్తున్న ముళ్లపొదలతో వాహనదారుల అవస్థలు!</h1>
+
+            <div class="featured-img-wrap">
+                <img src="IMG_20260928_062704.jpg" alt="రహదారిపై ముళ్లపొదలు">
+            </div>
+
+            <div class="news-text">
+                <p><span class="reporter-badge">మానేరు ప్రతినిధి:</span> జాతీయ రహదారిపై ప్రయాణం రోజురోజుకూ అత్యంత ప్రమాదకరంగా మారుతోంది. రహదారికి ఇరువైపులా ఏపుగా పెరిగిన ముళ్లచెట్లు, పిచ్చిమొక్కలు రోడ్డుపైకి చొచ్చుకురావడంతో వాహనదారులు తీవ్ర భయాందోళనలకు గురవుతున్నారు.</p>
+
+                <p>ముఖ్యంగా మలుపుల వద్ద రోడ్డుపైకి విస్తరించిన చెట్ల కొమ్మల వలన ఎదురుగా వచ్చే భారీ వాహనాలు కనిపించక తరచూ చిన్నపాటి ప్రమాదాలు చోటుచేసుకుంటున్నాయి. రాత్రి వేళల్లో ద్విచక్ర వాహనదారులు ఈ ముళ్లపొదల కారణంగా అదుపుతప్పి కిందపడి తీవ్ర గాయాలపాలవుతున్నారు.</p>
+
+                <p>ఇప్పటికైనా సంబంధిత అధికారులు వెంటనే స్పందించి, యుద్ధప్రాతిపదికన రహదారికి ఇరువైపులా ఉన్న పిచ్చిపొదలను తొలగించి ప్రజలకు, ప్రయాణికులకు రక్షణ కల్పించాలని స్థానికులు కోరుతున్నారు.</p>
+            </div>
+
+            <!-- షేర్ విభాగం -->
+            <div class="share-box">
+                <span>ఈ వార్తను వాట్సాప్‌లో షేర్ చేయండి:</span>
+                <div class="share-btn-group">
+                    <a id="whatsappShare" href="#" target="_blank" class="btn btn-wa">
+                        WhatsApp లో షేర్ చేయండి
+                    </a>
+                    <button onclick="copyArticleLink()" class="btn btn-copy">
+                        📋 లింక్ కాపీ
+                    </button>
+                </div>
+            </div>
+        </article>
+
+        <div class="footer">
+            © 2026 మానేరు వార్త (ప్రజా గొంతుక) | భూపాలపల్లి, తెలంగాణ
+        </div>
+    </main>
+
+    <!-- షేర్ లింక్ స్క్రిప్ట్ -->
+    <script>
+        const pageUrl = window.location.href;
+        const msg = encodeURIComponent("జాతీయ రహదారిపై పొంచి ఉన్న ప్రమాదం - మానేరు వార్త:\n" + pageUrl);
+        document.getElementById("whatsappShare").href = "https://api.whatsapp.com/send?text=" + msg;
+
+        function copyArticleLink() {
+            navigator.clipboard.writeText(pageUrl).then(() => {
+                alert("వార్త లింక్ కాపీ అయింది!");
             });
         }
     </script>
