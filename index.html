@@ -8,36 +8,79 @@
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
-            background-color: #f0f2f5;
+            background-color: #f2f4f7;
             font-family: 'Mandali', sans-serif;
             color: #111;
         }
 
-        /* 1. పైన మెరూన్ బ్యానర్ & లోగో */
+        /* 1. టాప్ హెడర్ & పెద్ద లోగో డిజైన్ */
         .top-header {
-            background: linear-gradient(180deg, #800000 0%, #600000 100%);
+            background: linear-gradient(180deg, #7a0000 0%, #4a0000 100%);
             text-align: center;
-            padding: 15px 10px 10px 10px;
+            padding: 16px 12px 14px 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
         }
-        .main-logo {
-            width: 140px;
-            max-width: 40%;
-            height: auto;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+        
+        /* లోగో చిహ్నం */
+        .logo-box {
+            display: inline-block;
+            background: radial-gradient(circle, #1a334d 0%, #0d1b2a 100%);
+            border: 3px solid #dfb15b;
+            border-radius: 50%;
+            width: 170px;
+            height: 170px;
+            padding: 8px;
+            box-shadow: 0 0 18px rgba(223, 177, 91, 0.6), inset 0 0 10px rgba(0,0,0,0.8);
+            margin-bottom: 6px;
+        }
+        .logo-inner {
+            width: 100%;
+            height: 100%;
+            border: 1px dashed #dfb15b;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .logo-pen {
+            font-size: 26px;
+            line-height: 1;
+            filter: drop-shadow(0 2px 4px #000);
+        }
+        .logo-title {
+            font-family: 'Ramabhadra', sans-serif;
+            font-size: 24px;
+            font-weight: 900;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px #000, 0 0 8px #dfb15b;
+            line-height: 1.2;
+            margin-top: 2px;
+        }
+        .logo-sub {
+            font-size: 13px;
+            font-weight: bold;
+            color: #ffdd80;
+            letter-spacing: 0.5px;
+        }
+        .logo-loc {
+            font-size: 9px;
+            color: #d1d5db;
+            letter-spacing: 0.5px;
+            margin-top: 2px;
         }
 
-        /* 2. కేటగిరీ మెనూ బార్ */
+        /* 2. మెనూ బార్ */
         .nav-bar {
-            background-color: #1a1a1a;
+            background-color: #111111;
             display: flex;
             overflow-x: auto;
             white-space: nowrap;
             padding: 10px 15px;
-            gap: 20px;
-            scrollbar-width: none;
+            gap: 22px;
+            border-bottom: 2px solid #dfb15b;
         }
-        .nav-bar::-webkit-scrollbar { display: none; }
         .nav-bar a {
             color: #ffffff;
             text-decoration: none;
@@ -46,138 +89,172 @@
         }
         .nav-bar a.active {
             color: #ffcc00;
+            border-bottom: 2px solid #ffcc00;
+            padding-bottom: 2px;
         }
 
         /* 3. బ్రేకింగ్ న్యూస్ స్క్రోలర్ */
-        .ticker-wrap {
+        .ticker-bar {
+            background-color: #fff3cd;
             display: flex;
             align-items: center;
-            background-color: #fff2e0;
-            border-bottom: 2px solid #e0c8a8;
-            padding: 4px 10px;
-            font-size: 14px;
+            padding: 6px 10px;
+            border-bottom: 1px solid #ffeeba;
         }
-        .ticker-badge {
-            background-color: #b71c1c;
+        .ticker-tag {
+            background-color: #c00;
             color: #fff;
             font-weight: bold;
-            padding: 4px 8px;
-            border-radius: 4px;
             font-size: 13px;
+            padding: 3px 8px;
+            border-radius: 3px;
             margin-right: 10px;
             white-space: nowrap;
         }
-        .ticker-text {
-            color: #8a3b00;
+        .ticker-content {
+            color: #856404;
+            font-size: 14px;
+            font-weight: bold;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
-            font-weight: bold;
         }
 
-        /* 4. ప్రధాన వార్త కంటైనర్ */
+        /* 4. ప్రధాన వార్త కార్డ్ */
         .container {
-            max-width: 600px;
+            max-width: 650px;
             margin: 15px auto;
             padding: 0 10px 30px 10px;
         }
         .news-card {
             background: #ffffff;
             border-radius: 8px;
-            border-top: 4px solid #b71c1c;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            padding: 16px;
+            border-top: 5px solid #b71c1c;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+            padding: 18px 16px;
         }
 
+        .badge-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
         .category-tag {
-            display: inline-block;
             background-color: #b71c1c;
             color: white;
             font-size: 13px;
             font-weight: bold;
             padding: 4px 10px;
-            border-radius: 3px;
-            margin-bottom: 8px;
+            border-radius: 4px;
+        }
+        .reg-badge {
+            font-size: 11px;
+            color: #666;
+            font-weight: bold;
         }
 
-        .news-date {
-            color: #666;
+        .meta-info {
+            color: #555;
             font-size: 13px;
             margin-bottom: 12px;
-            font-weight: 500;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 6px;
         }
 
         h1 {
             font-family: 'Ramabhadra', sans-serif;
             font-size: 22px;
             line-height: 1.45;
-            color: #000;
+            color: #111;
+            margin-bottom: 8px;
+        }
+        .sub-heading {
+            font-size: 16px;
+            color: #b71c1c;
+            font-weight: bold;
+            line-height: 1.4;
             margin-bottom: 14px;
         }
 
-        .featured-img-wrap {
+        .news-photo {
             width: 100%;
             margin-bottom: 14px;
         }
-        .featured-img-wrap img {
+        .news-photo img {
             width: 100%;
             height: auto;
             border-radius: 6px;
             display: block;
+            border: 1px solid #ddd;
+        }
+        .img-caption {
+            font-size: 12px;
+            color: #666;
+            margin-top: 5px;
+            text-align: center;
+            font-weight: bold;
         }
 
-        .news-text {
+        .news-body {
             font-size: 16px;
-            line-height: 1.85;
+            line-height: 1.9;
             color: #222;
             text-align: justify;
         }
-        .news-text p {
-            margin-bottom: 12px;
+        .news-body p {
+            margin-bottom: 14px;
         }
-        .reporter-badge {
+        .lead-text {
             font-weight: bold;
             color: #b71c1c;
         }
+        .sub-sec {
+            font-family: 'Ramabhadra', sans-serif;
+            font-size: 17px;
+            color: #0d1b2a;
+            margin: 16px 0 6px 0;
+            border-left: 4px solid #b71c1c;
+            padding-left: 8px;
+        }
 
-        /* 5. వాట్సాప్ మరియు సోషల్ షేరింగ్ */
-        .share-box {
-            margin-top: 20px;
-            padding: 14px;
-            background-color: #fafafa;
-            border: 1px solid #e0e0e0;
+        /* 5. వాట్సాప్ షేర్ & లింక్ */
+        .share-section {
+            margin-top: 22px;
+            padding: 16px;
+            background-color: #f8f9fa;
+            border: 1px solid #e9ecef;
             border-radius: 6px;
             text-align: center;
         }
-        .share-box span {
+        .share-section p {
             font-size: 14px;
             font-weight: bold;
-            color: #444;
-            display: block;
-            margin-bottom: 10px;
+            color: #333;
+            margin-bottom: 12px;
         }
-        .share-btn-group {
+        .btn-group {
             display: flex;
             gap: 10px;
             justify-content: center;
+            flex-wrap: wrap;
         }
         .btn {
-            text-decoration: none;
-            padding: 9px 16px;
+            border: none;
+            padding: 10px 18px;
             border-radius: 5px;
             font-size: 14px;
             font-weight: bold;
             color: #fff;
-            border: none;
             cursor: pointer;
+            text-decoration: none;
             display: inline-flex;
             align-items: center;
             gap: 6px;
         }
         .btn-wa { background-color: #25D366; }
-        .btn-copy { background-color: #333333; }
+        .btn-copy { background-color: #212529; }
 
-        /* ఫూటర్ */
         .footer {
             text-align: center;
             margin-top: 25px;
@@ -188,74 +265,95 @@
 </head>
 <body>
 
-    <!-- 1. టాప్ హెడర్ లోగో -->
+    <!-- 1. టాప్ హెడర్ లోగో (పెద్ద సైజులో) -->
     <header class="top-header">
-        <img src="logo.png" alt="మానేరు వార్త లోగో" class="main-logo">
+        <div class="logo-box">
+            <div class="logo-inner">
+                <div class="logo-pen">🖋️</div>
+                <div class="logo-title">మానేరు వార్త</div>
+                <div class="logo-sub">ప్రజా గొంతుక</div>
+                <div class="logo-loc">భూపాలపల్లి, తెలంగాణ • ESTD. 2026</div>
+            </div>
+        </div>
     </header>
 
-    <!-- 2. కేటగిరీ నావిగేషన్ -->
+    <!-- 2. మెనూ బార్ -->
     <nav class="nav-bar">
         <a href="#" class="active">తాజా వార్తలు</a>
         <a href="#">తెలంగాణ</a>
         <a href="#">జిల్లా వార్తలు</a>
-        <a href="#">రాజకీయం</a>
-        <a href="#">క్రైమ్</a>
+        <a href="#">భూపాలపల్లి</a>
+        <a href="#">కాళేశ్వరం</a>
     </nav>
 
-    <!-- 3. బ్రేకింగ్ న్యూస్ స్క్రోలర్ -->
-    <div class="ticker-wrap">
-        <span class="ticker-badge">బ్రేకింగ్</span>
-        <span class="ticker-text">జాతీయ రహదారిపై పిచ్చిమొక్కల కారణంగా వాహనదారుల ఇబ్బందులు..</span>
+    <!-- 3. బ్రేకింగ్ స్క్రోలర్ -->
+    <div class="ticker-bar">
+        <span class="ticker-tag">బ్రేకింగ్</span>
+        <span class="ticker-content">భూపాలపల్లి – కాళేశ్వరం NH-353C పై ప్రమాదకరంగా మారిన ముళ్లపొదలు..</span>
     </div>
 
     <!-- 4. వార్తా వివరాలు -->
     <main class="container">
         <article class="news-card">
-            <span class="category-tag">ప్రధాన వార్త</span>
-            <div class="news-date">తేదీ: 28 సెప్టెంబర్ 2026 | భూపాలపల్లి, తెలంగాణ</div>
-
-            <h1>జాతీయ రహదారిపై పొంచి ఉన్న ప్రమాదం.. రోడ్డుపైకి విస్తరిస్తున్న ముళ్లపొదలతో వాహనదారుల అవస్థలు!</h1>
-
-            <div class="featured-img-wrap">
-                <img src="IMG_20260928_062704.jpg" alt="రహదారిపై ముళ్లపొదలు">
+            
+            <div class="badge-row">
+                <span class="category-tag">ప్రధాన వార్త</span>
+                <span class="reg-badge">పోర్టల్ Regd: MV-2026</span>
             </div>
 
-            <div class="news-text">
-                <p><span class="reporter-badge">మానేరు ప్రతినిధి:</span> జాతీయ రహదారిపై ప్రయాణం రోజురోజుకూ అత్యంత ప్రమాదకరంగా మారుతోంది. రహదారికి ఇరువైపులా ఏపుగా పెరిగిన ముళ్లచెట్లు, పిచ్చిమొక్కలు రోడ్డుపైకి చొచ్చుకురావడంతో వాహనదారులు తీవ్ర భయాందోళనలకు గురవుతున్నారు.</p>
-
-                <p>ముఖ్యంగా మలుపుల వద్ద రోడ్డుపైకి విస్తరించిన చెట్ల కొమ్మల వలన ఎదురుగా వచ్చే భారీ వాహనాలు కనిపించక తరచూ చిన్నపాటి ప్రమాదాలు చోటుచేసుకుంటున్నాయి. రాత్రి వేళల్లో ద్విచక్ర వాహనదారులు ఈ ముళ్లపొదల కారణంగా అదుపుతప్పి కిందపడి తీవ్ర గాయాలపాలవుతున్నారు.</p>
-
-                <p>ఇప్పటికైనా సంబంధిత అధికారులు వెంటనే స్పందించి, యుద్ధప్రాతిపదికన రహదారికి ఇరువైపులా ఉన్న పిచ్చిపొదలను తొలగించి ప్రజలకు, ప్రయాణికులకు రక్షణ కల్పించాలని స్థానికులు కోరుతున్నారు.</p>
+            <div class="meta-info">
+                <strong>తేదీ:</strong> 28 సెప్టెంబర్ 2026 | <strong>ప్రాంతం:</strong> భూపాలపల్లి – కాళేశ్వరం NH-353C
             </div>
 
-            <!-- షేర్ విభాగం -->
-            <div class="share-box">
-                <span>ఈ వార్తను వాట్సాప్‌లో షేర్ చేయండి:</span>
-                <div class="share-btn-group">
-                    <a id="whatsappShare" href="#" target="_blank" class="btn btn-wa">
-                        WhatsApp లో షేర్ చేయండి
+            <h1>భూపాలపల్లి – కాళేశ్వరం NH-353C జాతీయ రహదారిపై పొంచి ఉన్న ప్రమాదం!</h1>
+            <p class="sub-heading">రోడ్డుపైకి ఏపుగా విస్తరిస్తున్న ముళ్లపొదలు.. కనిపించని మూలమలుపులు.. ప్రాణభయంతో వాహనదారుల ప్రయాణం!</p>
+
+            <div class="news-photo">
+                <img src="IMG_20260928_062704.jpg" alt="NH-353C పై విస్తరించిన ముళ్లపొదలు">
+                <div class="img-caption">▲ భూపాలపల్లి – కాళేశ్వరం NH-353C రహదారికి ఇరువైపులా విస్తరించిన ప్రమాదకర పొదలు</div>
+            </div>
+
+            <div class="news-body">
+                <p><span class="lead-text">మానేరు ప్రతినిధి, భూపాలపల్లి:</span> జయశంకర్ భూపాలపల్లి జిల్లా కేంద్రం నుంచి ప్రముఖ పుణ్యక్షేత్రమైన కాళేశ్వరం దేవస్థానాన్ని కలిపే అత్యంత కీలకమైన **NH-353C జాతీయ రహదారిపై** ప్రయాణం రోజురోజుకూ అత్యంత ప్రమాదకరంగా మారుతోంది. రహదారికి ఇరువైపులా ఏపుగా పెరిగిన ముళ్లచెట్లు, తుమ్మ పొదలు రోడ్డు సగానికి పైగా విస్తరించడంతో నిత్యం రాకపోకలు సాగించే ప్రయాణికులు, భక్తులు తీవ్ర భయాందోళనలు వ్యక్తం చేస్తున్నారు.</p>
+
+                <div class="sub-sec">కనిపించని ఎదురు వాహనాలు.. నిత్యం ప్రమాదాలు!</div>
+                <p>కాళేశ్వరం ముక్తీశ్వర స్వామి దర్శనార్థం రాష్ట్రం నలుమూలల నుంచే కాకుండా మహారాష్ట్ర, ఛత్తీస్‌గఢ్ ప్రాంతాల నుంచి నిత్యం వందలాది ఆర్టీసీ బస్సులు, భారీ లారీలు, కార్లు మరియు ద్విచక్ర వాహనాలు ఈ రహదారి గుండా ప్రయాణిస్తుంటాయి. అయితే ప్రధాన మలుపుల వద్ద రోడ్డుపైకి భారీగా చొచ్చుకువచ్చిన చెట్ల కొమ్మల వలన ఎదురుగా ఏ వాహనం వస్తుందో కనిపించక తీవ్ర ప్రమాదాలు చోటుచేసుకుంటున్నాయి.</p>
+
+                <div class="sub-sec">రాత్రి వేళల్లో ప్రాణసంకటం</div>
+                <p>ముఖ్యంగా రాత్రి వేళల్లో ఎదురుగా వచ్చే వాహనాల లైట్ల వెలుతురులో రోడ్డు అంచున ఉన్న ఈ ముళ్లపొదలు ఏమాత్రం కనిపించకపోవడంతో ద్విచక్ర వాహనదారులు నేరుగా ముళ్లపొదల్లోకి దూసుకెళ్లి తీవ్రంగా గాయపడుతున్నారు. అటు భారీ వాహనాలు ఎదురైనప్పుడు సైడ్ ఇచ్చేందుకు రోడ్డు పక్కన జాగ లేక టైర్లు పక్కకు దిగి వాహనాలు బోల్తా పడుతున్న సంఘటనలు కూడా చోటుచేసుకుంటున్నాయి.</p>
+
+                <div class="sub-sec">అధికారులు, ప్రజాప్రతినిధులు వెంటనే స్పందించాలి</div>
+                <p>కోట్లాది రూపాయలు వెచ్చించి జాతీయ రహదారిగా ప్రకటించినప్పటికీ, కనీస నిర్వహణ చేపట్టకపోవడంపై స్థానిక ప్రజలు తీవ్ర ఆగ్రహం వ్యక్తం చేస్తున్నారు. ఇప్పటికైనా సంబంధిత జాతీయ రహదారుల ప్రాధికార సంస్థ (NHAI) అధికారులు, జిల్లా యంత్రాంగం తక్షణమే స్పందించి, యుద్ధప్రాతిపదికన NH-353C రహదారికి ఇరువైపులా ఉన్న ముళ్లపొదలను తొలగించి, రోడ్డుకు ఇరువైపులా స్పష్టమైన సైన్ బోర్డులు ఏర్పాటు చేసి ప్రయాణికుల ప్రాణాలను కాపాడాలని ప్రజలు, వాహనదారులు గట్టిగా డిమాండ్ చేస్తున్నారు.</p>
+            </div>
+
+            <!-- షేరింగ్ -->
+            <div class="share-section">
+                <p>ఈ వార్తను వాట్సాప్ మరియు సోషల్ మీడియాలో షేర్ చేయండి:</p>
+                <div class="btn-group">
+                    <a id="waBtn" href="#" target="_blank" class="btn btn-wa">
+                        🟢 WhatsApp లో షేర్ చేయండి
                     </a>
-                    <button onclick="copyArticleLink()" class="btn btn-copy">
-                        📋 లింక్ కాపీ
+                    <button onclick="copyLink()" class="btn btn-copy">
+                        📋 లింక్ కాపీ చేయండి
                     </button>
                 </div>
             </div>
+
         </article>
 
         <div class="footer">
-            © 2026 మానేరు వార్త (ప్రజా గొంతుక) | భూపాలపల్లి, తెలంగాణ
+            © 2026 మానేరు వార్త (ప్రజా గొంతుక) | భూపాలపల్లి, తెలంగాణ. సర్వహక్కులు ప్రత్యేకించబడ్డాయి.
         </div>
     </main>
 
-    <!-- షేర్ లింక్ స్క్రిప్ట్ -->
     <script>
-        const pageUrl = window.location.href;
-        const msg = encodeURIComponent("జాతీయ రహదారిపై పొంచి ఉన్న ప్రమాదం - మానేరు వార్త:\n" + pageUrl);
-        document.getElementById("whatsappShare").href = "https://api.whatsapp.com/send?text=" + msg;
+        const currentUrl = window.location.href;
+        const msgText = encodeURIComponent("భూపాలపల్లి – కాళేశ్వరం NH-353C జాతీయ రహదారిపై పొంచి ఉన్న ప్రమాదం! - మానేరు వార్త ప్రత్యేక కథనం చూడండి:\n" + currentUrl);
+        document.getElementById("waBtn").href = "https://api.whatsapp.com/send?text=" + msgText;
 
-        function copyArticleLink() {
-            navigator.clipboard.writeText(pageUrl).then(() => {
-                alert("వార్త లింక్ కాపీ అయింది!");
+        function copyLink() {
+            navigator.clipboard.writeText(currentUrl).then(() => {
+                alert("వార్త లింక్ కాపీ అయింది! ఎవరికైనా షేర్ చేయవచ్చు.");
             });
         }
     </script>
