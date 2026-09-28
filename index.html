@@ -3,32 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>మానేరు వార్తలు</title>
+    <title>మానేరు వార్తలు - పేపర్ క్లిప్</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 15px; background-color: #f4f6f8; }
-        .card { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); max-width: 650px; margin: auto; }
-        .tag { background-color: #d32f2f; color: white; padding: 4px 8px; border-radius: 4px; font-size: 13px; font-weight: bold; }
-        h1 { color: #1a1a1a; font-size: 22px; line-height: 1.4; margin-top: 10px; }
-        .date { color: #777; font-size: 13px; margin-bottom: 12px; }
-        img { width: 100%; height: auto; border-radius: 8px; margin: 10px 0 15px 0; }
-        p { color: #333; font-size: 16px; line-height: 1.8; text-align: justify; }
-        .reporter { font-weight: bold; color: #d32f2f; }
+        body {
+            background-color: #dcd6cd;
+            font-family: 'Gautami', 'Suranna', 'Georgia', serif;
+            display: flex;
+            justify-content: center;
+            padding: 20px 10px;
+            margin: 0;
+        }
+        /* పేపర్ క్లిప్పింగ్ బాక్స్ */
+        .newspaper-clip {
+            background-color: #faf7ee;
+            max-width: 580px;
+            width: 100%;
+            padding: 20px 24px;
+            border: 1px dashed #666;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+            position: relative;
+        }
+        /* పేపర్ పైన పత్రిక పేరు */
+        .paper-header {
+            text-align: center;
+            border-bottom: 3px double #222;
+            padding-bottom: 8px;
+            margin-bottom: 12px;
+        }
+        .paper-header .paper-name {
+            font-size: 26px;
+            font-weight: 900;
+            color: #b30000;
+            letter-spacing: 1px;
+            margin: 0;
+        }
+        .paper-header .meta {
+            font-size: 11px;
+            color: #444;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 4px;
+            border-top: 1px solid #444;
+            padding-top: 3px;
+        }
+        /* వార్తా శీర్షిక */
+        h1 {
+            color: #111;
+            font-size: 22px;
+            line-height: 1.35;
+            font-weight: 800;
+            margin: 10px 0;
+            text-align: center;
+            border-bottom: 1px solid #888;
+            padding-bottom: 8px;
+        }
+        /* ఫోటో శైలి */
+        .news-img-box {
+            text-align: center;
+            margin: 12px 0;
+        }
+        .news-img-box img {
+            width: 100%;
+            max-height: 380px;
+            object-fit: cover;
+            border: 1px solid #999;
+            padding: 3px;
+            background: #fff;
+        }
+        .img-caption {
+            font-size: 12px;
+            color: #444;
+            font-style: italic;
+            margin-top: 4px;
+        }
+        /* వార్త వివరాలు (కాలమ్ రూపంలో) */
+        .news-content {
+            font-size: 15px;
+            line-height: 1.8;
+            color: #1a1a1a;
+            text-align: justify;
+            text-justify: inter-word;
+        }
+        .reporter-tag {
+            font-weight: bold;
+            color: #000;
+        }
     </style>
 </head>
 <body>
 
-    <div class="card">
-        <span class="tag">తాజా వార్త</span>
-        <h1>జాతీయ రహదారిపై పొంచి ఉన్న ప్రమాదం: రోడ్డుపైకి విస్తరిస్తున్న ముళ్లపొదలు!</h1>
-        <div class="date">మానేరు న్యూస్ డెస్క్</div>
+    <!-- దినపత్రిక వార్తా క్లిప్ -->
+    <div class="newspaper-clip">
+        <div class="paper-header">
+            <h2 class="paper-name">మానేరు వార్తలు</h2>
+            <div class="meta">
+                <span>జిల్లా ఎడిషన్</span>
+                <span>ప్రత్యేక కథనం</span>
+            </div>
+        </div>
 
-        <img src="IMG_20260928_062704.jpg" alt="రహదారిపై ముళ్లపొదలు">
+        <h1>జాతీయ రహదారిపై పొంచి ఉన్న ప్రమాదం<br><span style="font-size: 16px; color: #b30000; font-weight: normal;">రోడ్డుపైకి విస్తరిస్తున్న ముళ్లపొదలు</span></h1>
 
-        <p><span class="reporter">మానేరు ప్రతినిధి:</span> జాతీయ రహదారిపై ప్రయాణం రోజురోజుకూ ప్రమాదకరంగా మారుతోంది. రహదారికి ఇరువైపులా ఏపుగా పెరిగిన ముళ్లచెట్లు, పిచ్చిమొక్కలు రోడ్డుపైకి విస్తరిస్తుండటంతో వాహనదారులు తీవ్ర భయాందోళన వ్యక్తం చేస్తున్నారు.</p>
-        
-        <p>ముఖ్యంగా మలుపుల వద్ద రోడ్డుపైకి చొచ్చుకువచ్చిన చెట్ల కొమ్మల కారణంగా ఎదురుగా వచ్చే వాహనాలు సరిగ్గా కనిపించక నిత్యం చిన్నపాటి ప్రమాదాలు జరుగుతున్నాయి. రాత్రి వేళల్లో ద్విచక్ర వాహనదారులు మరింత ఇబ్బందులు ఎదుర్కొంటున్నారు.</p>
-        
-        <p>ఇప్పటికైనా సంబంధిత అధికారులు వెంటనే స్పందించి, రోడ్డుకి ఇరువైపులా ఉన్న పిచ్చిపొదలను పూర్తిగా తొలగించి వాహనదారులకు రక్షణ కల్పించాలని స్థానిక ప్రజలు విజ్ఞప్తి చేస్తున్నారు.</p>
+        <div class="news-img-box">
+            <img src="IMG_20260928_062704.jpg" alt="రహదారిపై ముళ్లపొదలు">
+            <div class="img-caption">▲ రహదారికి ఇరువైపులా ఏపుగా పెరిగిన పిచ్చిచెట్లు</div>
+        </div>
+
+        <div class="news-content">
+            <p><span class="reporter-tag">మానేరు ప్రతినిధి:</span> జాతీయ రహదారిపై ప్రయాణం రోజురోజుకూ ప్రమాదకరంగా మారుతోంది. రహదారికి ఇరువైపులా ఏపుగా పెరిగిన ముళ్లచెట్లు, పిచ్చిమొక్కలు రోడ్డుపైకి విస్తరిస్తుండటంతో వాహనదారులు తీవ్ర భయాందోళన వ్యక్తం చేస్తున్నారు.</p>
+            
+            <p>ముఖ్యంగా మలుపుల వద్ద రోడ్డుపైకి చొచ్చుకువచ్చిన చెట్ల కొమ్మల కారణంగా ఎదురుగా వచ్చే వాహనాలు సరిగ్గా కనిపించక నిత్యం చిన్నపాటి ప్రమాదాలు జరుగుతున్నాయి. రాత్రి వేళల్లో ద్విచక్ర వాహనదారులు అదుపుతప్పి కిందపడిపోతున్న సంఘటనలు ఎక్కువయ్యాయి.</p>
+            
+            <p>ఇప్పటికైనా సంబంధిత అధికారులు వెంటనే స్పందించి, రోడ్డుకి ఇరువైపులా ఉన్న పిచ్చిపొదలను పూర్తిగా తొలగించి వాహనదారులకు రక్షణ కల్పించాలని స్థానిక ప్రజలు, ప్రయాణికులు విజ్ఞప్తి చేస్తున్నారు.</p>
+        </div>
     </div>
 
 </body>
