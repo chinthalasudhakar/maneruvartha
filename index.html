@@ -1,36 +1,234 @@
 <!DOCTYPE html>
 <html lang="te">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>రోడ్డు భద్రతా సమస్య</title>
-    <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; padding: 20px; max-width: 800px; margin: auto; }
-        h1, h2 { color: #d9534f; }
-        img { max-width: 100%; height: auto; border-radius: 8px; }
-        .caption { font-size: 0.9em; color: #555; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>రోడ్డు భద్రతా సమస్య</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 15px;
+      background-color: #f7f7f7;
+      color: #333;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      background: #ffffff;
+      padding: 12px 18px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+      margin-bottom: 20px;
+    }
+    .header img {
+      height: 48px;
+    }
+    .header h2 {
+      margin: 0;
+      color: #d9534f;
+    }
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #d9534f;
+      font-size: 24px;
+      margin-top: 10px;
+      margin-bottom: 12px;
+      line-height: 1.4;
+    }
+    .meta-info {
+      font-size: 13px;
+      color: #777;
+      margin-bottom: 15px;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+    .badge {
+      background-color: #d9534f;
+      color: #ffffff;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-weight: bold;
+      font-size: 12px;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      display: block;
+    }
+    .caption {
+      font-size: 0.9em;
+      color: #666;
+      margin-top: 6px;
+      margin-bottom: 18px;
+      text-align: center;
+      font-style: italic;
+    }
+    .content {
+      font-size: 16px;
+      line-height: 1.8;
+      color: #333333;
+    }
+    .content p {
+      margin-bottom: 14px;
+    }
+
+    /* సోషల్ మీడియా షేర్ సెక్షన్ */
+    .share-box {
+      margin-top: 25px;
+      padding-top: 15px;
+      border-top: 1px solid #eee;
+    }
+    .share-box h3 {
+      font-size: 16px;
+      margin-bottom: 12px;
+      color: #444;
+    }
+    .share-buttons {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .btn-share {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 14px;
+      border-radius: 6px;
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: bold;
+    }
+    .btn-whatsapp { background-color: #25D366; }
+    .btn-facebook { background-color: #1877F2; }
+    .btn-twitter { background-color: #1DA1F2; }
+    .btn-telegram { background-color: #0088cc; }
+
+    /* ఇతర వార్తల సెక్షన్ */
+    .related-news {
+      margin-top: 30px;
+      padding-top: 15px;
+      border-top: 2px solid #f0f0f0;
+    }
+    .related-news h3 {
+      font-size: 18px;
+      color: #d9534f;
+      margin-bottom: 15px;
+    }
+    .news-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .news-item {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px solid #f4f4f4;
+      text-decoration: none;
+      color: inherit;
+    }
+    .news-item:hover {
+      background-color: #fafafa;
+    }
+    .news-item img {
+      width: 80px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+    .news-item-title {
+      font-size: 14px;
+      font-weight: bold;
+      color: #222;
+      line-height: 1.4;
+    }
+    .news-item-time {
+      font-size: 12px;
+      color: #888;
+      margin-top: 4px;
+    }
+  </style>
 </head>
 <body>
 
-    <h1>⚠️ రోడ్డు భద్రతా సమస్య: భూపాలపల్లి - కాళేశ్వరం జాతీయ రహదారి</h1>
+  <!-- హెడర్ -->
+  <div class="header">
+    <img src="maneru logo.png" alt="మానేరు వార్త లోగో">
+    <h2>మానేరు వార్త</h2>
+  </div>
 
-    <h2>📌 సమస్య వివరాలు</h2>
-    <p>జయశంకర్ భూపాలపల్లి నుండి కాళేశ్వరం వెళ్లే జాతీయ రహదారిపై వాహనదారుల భద్రతకు తీవ్ర ముప్పు ఏర్పడింది.</p>
-    <ul>
-        <li><strong>ముళ్ళపొదలు & చెట్లు:</strong> రహదారికి ఇరువైపులా ఉన్న ముళ్ళకంపలు రోడ్డుపైకి విస్తరించాయి. ఎదురుగా వచ్చే వాహనాలకు దారి ఇచ్చే సమయంలో ద్విచక్ర వాహనదారులకు ఇవి తగిలి గాయాలవుతున్నాయి.</li>
-        <li><strong>రహదారిపై గుంతలు:</strong> గుంతల వల్ల బైక్‌లు అదుపుతప్పి పడిపోతున్నాయి.</li>
-    </ul>
+  <!-- ప్రధాన వార్త -->
+  <div class="container">
+    <div class="meta-info">
+      <span class="badge">తాజా వార్త</span>
+      <span>1 hour ago</span>
+    </div>
 
-    <h2>📷 ఫొటో ఆధారం</h2>
-    <img src="657725.jpg" alt="రహదారిపై ముళ్ళకంపలు">
-    <p class="caption"><em>చిత్రం: రోడ్డుపైకి విస్తరించిన ముళ్ళపొదలు.</em></p>
+    <h1>రోడ్డు భద్రతా సమస్య: ప్రమాదాలకు గురవుతున్న ప్రయాణికులు</h1>
 
-    <h2>🛠️ అవసరమైన చర్యలు</h2>
-    <ol>
-        <li>రోడ్డుపైకి చొచ్చుకువచ్చిన ముళ్ళకంపలను వెంటనే తొలగించాలి.</li>
-        <li>రహదారిపై ఉన్న గుంతలను పూడ్చివేయాలి.</li>
-    </ol>
+    <!-- 1 గంట క్రితం నాటి ఫోటో పేరును ఇక్కడ ఇవ్వండి -->
+    <img src="IMG_20260928_0..." alt="రోడ్డు భద్రతా సమస్య చిత్రం">
+    <div class="caption">గుంతలమయంగా మారిన ప్రధాన రహదారి</div>
+
+    <div class="content">
+      <p>
+        ప్రాంతీయ రహదారులపై భద్రతా ప్రమాణాలు లోపించడంతో వాహనదారులు తీవ్ర ఇబ్బందులు ఎదుర్కొంటున్నారు. ప్రధాన కూడళ్ల వద్ద సరైన సూచికలు, వీధి దీపాలు లేకపోవడం వల్ల ప్రమాదాల సంఖ్య పెరుగుతోంది.
+      </p>
+      <p>
+        ముఖ్యంగా రాత్రి వేళల్లో ప్రయాణించే వారు గుంతలను గమనించలేక అదుపుతప్పి పడిపోతున్న సంఘటనలు నిత్యకృత్యంగా మారాయి. సంబంధిత అధికారులు తక్షణమే స్పందించి మరమ్మతులు చేపట్టాలని స్థానికులు కోరుతున్నారు.
+      </p>
+    </div>
+
+    <!-- సోషల్ మీడియా షేర్ బటన్లు -->
+    <div class="share-box">
+      <h3>ఈ వార్తను షేర్ చేయండి:</h3>
+      <div class="share-buttons">
+        <a class="btn-share btn-whatsapp" href="https://api.whatsapp.com/send?text=రోడ్డు%20భద్రతా%20సమస్య%20-%20మానేరు%20వార్త" target="_blank">WhatsApp</a>
+        <a class="btn-share btn-facebook" href="https://www.facebook.com/sharer/sharer.php" target="_blank">Facebook</a>
+        <a class="btn-share btn-twitter" href="https://twitter.com/intent/tweet?text=రోడ్డు%20భద్రతా%20సమస్య" target="_blank">Twitter</a>
+        <a class="btn-share btn-telegram" href="https://t.me/share/url?url=maneruvartha" target="_blank">Telegram</a>
+      </div>
+    </div>
+
+    <!-- ఇతర వార్తలు (మీ రిపోజిటరీ ఫైళ్ల ఆధారంగా) -->
+    <div class="related-news">
+      <h3>ఇతర ముఖ్య వార్తలు</h3>
+      <div class="news-list">
+        
+        <!-- బస్వాపూర్ వార్త -->
+        <a href="#" class="news-item">
+          <img src="బస్వాపూర్.jpg" alt="బస్వాపూర్">
+          <div>
+            <div class="news-item-title">బస్వాపూర్ రిజర్వాయర్ పరిసరాల్లో తాజా పరిస్థితులు</div>
+            <div class="news-item-time">14 hours ago</div>
+          </div>
+        </a>
+
+        <!-- 17 గంటల క్రితం నాటి వార్త -->
+        <a href="#" class="news-item">
+          <img src="IMG202609271252..." alt="తాజా అప్‌డేట్">
+          <div>
+            <div class="news-item-title">గ్రామీణ ప్రాంతాల్లో తాగునీటి సరఫరాపై సమీక్ష</div>
+            <div class="news-item-time">17 hours ago</div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+  </div>
 
 </body>
 </html>
