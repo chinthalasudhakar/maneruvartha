@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ఈ-పేపర్ | డిజిటల్ ఎడిషన్</title>
+  <title>మానేరు వార్త | ఈ-పేపర్</title>
 
-  <!-- Flipbook CSS (CDN ద్వారా) -->
+  <!-- dFlip CSS -->
   <link href="https://cdn.jsdelivr.net/npm/dflip/css/dflip.min.css" rel="stylesheet" type="text/css">
   <link href="https://cdn.jsdelivr.net/npm/dflip/css/themify-icons.min.css" rel="stylesheet" type="text/css">
 
@@ -13,17 +13,17 @@
     body {
       margin: 0;
       padding: 0;
-      background-color: #2b2b2b;
+      background-color: #1a1a1a;
       font-family: sans-serif;
     }
     .header-bar {
-      background: #111;
+      background: #0f172a;
       color: #fff;
       text-align: center;
       padding: 12px 10px;
       font-size: 18px;
       font-weight: bold;
-      border-bottom: 2px solid #e60000;
+      border-bottom: 2px solid #e11d48;
     }
     #flipbook-container {
       height: 90vh;
@@ -37,18 +37,24 @@
     ఈ-పేపర్ - డిజిటల్ సంచిక
   </div>
 
-  <!-- ఫ్లిప్‌బుక్ కంటైనర్ -->
   <div id="flipbook-container">
+    <!-- మీ PDF ఫైల్ పేరు ఇక్కడ సరిగ్గా ఇవ్వండి -->
     <div class="_df_book" 
          id="my_epaper" 
-         source="epaper.pdf" 
+         source="./epaper.pdf" 
          webgl="true">
     </div>
   </div>
 
-  <!-- jQuery & Flipbook JS -->
+  <!-- jQuery, PDF.js & dFlip JS -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/dflip/js/dflip.min.js"></script>
+
+  <script>
+    // PDF లోడింగ్ సెట్టింగ్స్
+    var dFlipLocation = "https://cdn.jsdelivr.net/npm/dflip/";
+  </script>
 
 </body>
 </html>
