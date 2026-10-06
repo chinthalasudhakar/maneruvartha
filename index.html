@@ -3,110 +3,127 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>మానేరు వార్త - వార్తా కథనం</title>
+  <title>మానేరు వార్త - పేపర్ క్లిప్పింగ్</title>
   <style>
     body {
-      font-family: 'Mandali', 'Gautami', 'Segoe UI', Arial, sans-serif;
-      line-height: 1.8;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f6f9;
-      color: #222;
-    }
-    .header-container {
-      background-color: #ffffff;
-      border-bottom: 3px solid #b71c1c;
-      padding: 15px 20px;
-      text-align: center;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-    }
-    .logo-title-wrap {
+      background-color: #d1d5db;
       display: flex;
-      align-items: center;
       justify-content: center;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
-    .site-logo {
-      width: 70px;
-      height: 70px;
-      object-fit: contain;
-      border-radius: 8px;
-    }
-    .site-title {
+      padding: 20px 10px;
+      font-family: 'Mandali', 'Gautami', 'Noto Sans Telugu', serif;
       margin: 0;
+    }
+
+    /* పత్రిక క్లిప్పింగ్ బోర్డర్ మరియు నేపథ్యం */
+    .paper-clipping {
+      background-color: #fbfbf7;
+      max-width: 600px;
+      width: 100%;
+      padding: 22px 20px;
+      border: 1px solid #c2bba8;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18), inset 0 0 10px rgba(0, 0, 0, 0.02);
+      position: relative;
+    }
+
+    /* మాస్ట్ హెడ్ (పత్రిక పేరు & తేదీ లైన్) */
+    .masthead {
+      text-align: center;
+      border-bottom: 2px solid #222;
+      padding-bottom: 8px;
+      margin-bottom: 12px;
+    }
+    .paper-title {
       font-size: 2.2rem;
+      font-weight: 900;
       color: #b71c1c;
-      font-weight: 800;
-      letter-spacing: 0.5px;
+      margin: 0;
+      letter-spacing: 1px;
     }
-    .site-tagline {
-      margin: 3px 0 0 0;
-      font-size: 1rem;
-      color: #555;
-      font-weight: 600;
+    .paper-meta {
+      display: flex;
+      justify-content: space-between;
+      border-top: 1px solid #444;
+      border-bottom: 1px solid #444;
+      padding: 3px 6px;
+      margin-top: 6px;
+      font-size: 0.85rem;
+      font-weight: bold;
+      color: #333;
     }
-    .main-content {
-      max-width: 800px;
-      margin: 25px auto;
-      background: #ffffff;
-      padding: 25px;
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    }
-    .article-title {
-      font-size: 1.6rem;
-      color: #1a237e;
-      margin-top: 0;
-      line-height: 1.4;
-      border-bottom: 2px solid #eee;
-      padding-bottom: 12px;
-    }
-    .article-meta {
+
+    /* వార్త ముఖ్యాంశాలు & శీర్షిక */
+    .sub-points {
+      list-style-type: square;
+      padding-left: 20px;
+      margin: 8px 0;
+      color: #b71c1c;
+      font-weight: 700;
       font-size: 0.95rem;
-      color: #666;
-      margin-bottom: 18px;
+      line-height: 1.5;
     }
-    .article-body {
-      font-size: 1.15rem;
+    .main-headline {
+      font-size: 1.45rem;
+      font-weight: 800;
+      color: #0b2265;
+      line-height: 1.4;
+      margin: 10px 0;
+      text-align: left;
+    }
+
+    /* పత్రిక కాలమ్ రూపం */
+    .news-content {
+      font-size: 1.02rem;
+      line-height: 1.75;
+      color: #1a1a1a;
       text-align: justify;
+      border-top: 1px dashed #999;
+      padding-top: 10px;
+      margin-top: 10px;
     }
-    .article-body p {
-      margin-bottom: 16px;
+    .dateline {
+      font-weight: 800;
+      color: #000;
+    }
+    .news-content p {
+      margin: 0 0 12px 0;
+      text-indent: 20px;
+    }
+    .news-content p:first-of-type {
+      text-indent: 0;
     }
   </style>
 </head>
 <body>
 
-  <!-- హెడర్: లోగో & పత్రిక పేరు -->
-  <header class="header-container">
-    <div class="logo-title-wrap">
-      <!-- మీ లోగో ఇమేజ్ ఫైల్ పేరు ఇక్కడ ఇవ్వండి -->
-      <img src="logo.png" alt="మానేరు వార్త లోగో" class="site-logo" onerror="this.style.display='none'">
-      <div>
-        <h1 class="site-title">మానేరు వార్త</h1>
-        <p class="site-tagline">ప్రజా గొంతుక</p>
+  <div class="paper-clipping">
+    <!-- పత్రిక హెడర్ -->
+    <div class="masthead">
+      <div class="paper-title">మానేరు వార్త</div>
+      <div class="paper-meta">
+        <span>జయశంకర్ భూపాలపల్లి</span>
+        <span>ప్రజా గొంతుక</span>
+        <span>మంగళవారం, 06 అక్టోబర్ 2026</span>
       </div>
     </div>
-  </header>
 
-  <!-- వార్తా విభాగం -->
-  <main class="main-content">
-    <h2 class="article-title">‘మీ ప్రమాణం’ యాప్‌ ద్వారానే ప్రభుత్వ ఉద్యోగుల హాజరు: కలెక్టర్‌ రాహుల్‌ శర్మ</h2>
-    <div class="article-meta">
-      <strong>జయశంకర్‌ భూపాలపల్లి | మానేరు వార్త</strong>
+    <!-- సబ్ పాయింట్స్ -->
+    <ul class="sub-points">
+      <li>వచ్చే వారం నుంచి తప్పనిసరిగా అమలు</li>
+      <li>ప్రభుత్వ సేవల్లో పారదర్శకత కోసమే నూతన విధానం</li>
+    </ul>
+
+    <!-- ప్రధాన శీర్షిక -->
+    <h2 class="main-headline">‘మీ ప్రమాణం’ యాప్‌ ద్వారానే ప్రభుత్వ ఉద్యోగుల హాజరు: కలెక్టర్‌ రాహుల్‌ శర్మ</h2>
+
+    <!-- వార్తా సమాచారం -->
+    <div class="news-content">
+      <p><span class="dateline">జయశంకర్‌ భూపాలపల్లి, మానేరు వార్త:</span> జిల్లాలోని అన్ని ప్రభుత్వ శాఖల అధికారులు, సిబ్బంది ఇకపై ‘మీ ప్రమాణం’ యాప్‌ ద్వారానే తప్పనిసరిగా హాజరు నమోదు చేయాలని జిల్లా కలెక్టర్‌ రాహుల్‌ శర్మ స్పష్టం చేశారు. సోమవారం సమీకృత జిల్లా కలెక్టరేట్ (ఐడీఓసీ) సమావేశ మందిరంలో ‘మీ ప్రమాణం’ హాజరు యాప్‌‌ వినియోగంపై వివిధ శాఖల జిల్లా స్థాయి అధికారులతో ఆయన ప్రత్యేక సమీక్షా సమావేశం నిర్వహించారు.</p>
+
+      <p>ఈ సందర్భంగా కలెక్టర్‌ మాట్లాడుతూ.. ప్రభుత్వ సేవల్లో పారదర్శకత, ఉద్యోగుల్లో సమయపాలన, జవాబుదారీతనం పెంచే లక్ష్యంతోనే ప్రభుత్వం ఈ విధానాన్ని తీసుకొచ్చిందని తెలిపారు. జిల్లా స్థాయి నుంచి క్షేత్రస్థాయి వరకు పనిచేస్తూ, ప్రభుత్వం ద్వారా వేతనాలు పొందుతున్న ప్రతి ఒక్క అధికారి, ఉద్యోగి తప్పనిసరిగా ఈ యాప్‌లోనే తమ హాజరు నమోదు చేయాలని ఆదేశించారు.</p>
+
+      <p>అనంతరం యాప్‌ వినియోగం, హాజరు నమోదు ప్రక్రియపై ఈడీఎం శ్రీకాంత్‌ అధికారులకు అవగాహన కల్పించారు. సమస్యలుంటే ఈడీఎంను సంప్రదించాలని కలెక్టర్ సూచించారు. ఈ సమావేశంలో అదనపు కలెక్టర్ అశోక్ కుమార్, డీఆర్వో వసంతకుమారి, ఆర్డీఓ హరికృష్ణ తదితరులు పాల్గొన్నారు.</p>
     </div>
-
-    <div class="article-body">
-      <p>జిల్లాలోని అన్ని ప్రభుత్వ శాఖల అధికారులు, సిబ్బంది ఇకపై ‘మీ ప్రమాణం’ యాప్‌ ద్వారానే తప్పనిసరిగా హాజరు నమోదు చేయాలని జిల్లా కలెక్టర్‌ రాహుల్‌ శర్మ స్పష్టం చేశారు. సోమవారం సమీకృత జిల్లా కలెక్టరేట్ (ఐడీఓసీ) సమావేశ మందిరంలో ‘మీ ప్రమాణం’ హాజరు యాప్‌ వినియోగంపై వివిధ శాఖల జిల్లా స్థాయి అధికారులతో ఆయన ప్రత్యేక సమీక్షా సమావేశం నిర్వహించారు.</p>
-
-      <p>ఈ సందర్భంగా కలెక్టర్‌ మాట్లాడుతూ.. ప్రభుత్వ కార్యాలయాల సేవల్లో పారదర్శకత, ఉద్యోగుల్లో సమయపాలన, జవాబుదారీతనం పెంపొందించే లక్ష్యంతోనే ఈ విధానాన్ని తీసుకొచ్చినట్లు తెలిపారు. ఈ నూతన విధానాన్ని వచ్చే వారం నుండి జిల్లావ్యాప్తంగా పకడ్బందీగా అమలు చేయనున్నట్లు పేర్కొన్నారు. జిల్లా కేంద్రం నుంచి క్షేత్రస్థాయి వరకు పనిచేస్తూ, ప్రభుత్వం ద్వారా వేతనాలు పొందుతున్న ప్రతి ఒక్క అధికారి, ఉద్యోగి తప్పనిసరిగా ఈ యాప్‌లోనే తమ హాజరు నమోదు చేయాలని ఆదేశించారు.</p>
-
-      <p>అనంతరం యాప్‌ వినియోగం, హాజరు నమోదు ప్రక్రియపై ఈడీఎం శ్రీకాంత్‌‌ అధికారులకు పవర్‌పాయింట్‌ ప్రజెంటేషన్‌ ద్వారా అవగాహన కల్పించారు. యాప్ వినియోగంలో సాంకేతిక సమస్యలు లేదా సందేహాలు తలెత్తితే వెంటనే ఈడీఎంను సంప్రదించి పరిష్కరించుకోవాలని కలెక్టర్‌ సూచించారు.</p>
-
-      <p>ఈ సమావేశంలో అదనపు కలెక్టర్‌ అశోక్‌ కుమార్‌, జిల్లా రెవెన్యూ అధికారి (డీఆర్వో) వసంతకుమారి, ఆర్డీఓ హరికృష్ణ, శిక్షణ డిప్యూటీ కలెక్టర్‌ నవీన్‌రెడ్డి, ఈడీఎం శ్రీకాంత్‌తో పాటు పలు శాఖల జిల్లా అధికారులు పాల్గొన్నారు.</p>
-    </div>
-  </main>
+  </div>
 
 </body>
 </html>
