@@ -1,60 +1,18 @@
-<!DOCTYPE html>
-<html lang="te">
-<head>
+<maneruvartha.in>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>మానేరు వార్త | ఈ-పేపర్</title>
+  
+  <!-- గూగుల్ సెర్చ్ కోసం టైటిల్ మరియు వివరాలు -->
+  <title>మానేరు వార్త | డిజిటల్ ఈ-పేపర్ (Maneru Vartha ePaper)</title>
+  <meta name="description" content="మానేరు వార్త దినపత్రిక డిజిటల్ ఈ-పేపర్ ఎడిషన్. తాజా వార్తలు, కథనాల కోసం ఆన్‌లైన్ పేపర్‌ను చదవండి.">
+  <meta name="keywords" content="Maneru Vartha, మానేరు వార్త, Telugu ePaper, Maneru Vartha epaper, news paper">
+  
+  <!-- వాట్సాప్, ఫేస్‌బుక్‌లో లింక్ షేర్ చేసినప్పుడు ప్రివ్యూ కోసం -->
+  <meta property="og:title" content="మానేరు వార్త - డిజిటల్ ఈ-పేపర్">
+  <meta property="og:description" content="ఈరోజు మానేరు వార్త ఈ-పేపర్‌ను ఇక్కడే డిజిటల్‌‌గా చదవండి.">
+  <meta property="og:url" content="https://maneruvartha.in">
+  <meta property="og:type" content="website">
 
-  <!-- dFlip CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/dflip/css/dflip.min.css" rel="stylesheet" type="text/css">
-  <link href="https://cdn.jsdelivr.net/npm/dflip/css/themify-icons.min.css" rel="stylesheet" type="text/css">
-
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background-color: #1a1a1a;
-      font-family: sans-serif;
-    }
-    .header-bar {
-      background: #0f172a;
-      color: #fff;
-      text-align: center;
-      padding: 12px 10px;
-      font-size: 18px;
-      font-weight: bold;
-      border-bottom: 2px solid #e11d48;
-    }
-    #flipbook-container {
-      height: 90vh;
-      width: 100%;
-    }
-  </style>
+  <!-- dFlip CSS & Scripts -->
+  ...
 </head>
-<body>
-
-  <div class="header-bar">
-    ఈ-పేపర్ - డిజిటల్ సంచిక
-  </div>
-
-  <div id="flipbook-container">
-    <!-- మీ PDF ఫైల్ పేరు ఇక్కడ సరిగ్గా ఇవ్వండి -->
-    <div class="_df_book" 
-         id="my_epaper" 
-         source="./epaper.pdf" 
-         webgl="true">
-    </div>
-  </div>
-
-  <!-- jQuery, PDF.js & dFlip JS -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/dflip/js/dflip.min.js"></script>
-
-  <script>
-    // PDF లోడింగ్ సెట్టింగ్స్
-    var dFlipLocation = "https://cdn.jsdelivr.net/npm/dflip/";
-  </script>
-
-</body>
-</html>
