@@ -66,6 +66,31 @@
   <script>
     var dFlipLocation = "https://cdn.jsdelivr.net/npm/dflip/";
   </script>
+<!-- పాత సంచికలు / తేదీ ఎంపిక విభాగం -->
+<div style="background: #222; padding: 10px; text-align: center; color: #fff; font-family: sans-serif; position: relative; z-index: 9999;">
+  <span style="font-size: 14px; margin-right: 8px;">పాత పేపర్లు:</span>
+  <input type="date" id="paperDate" style="padding: 5px 8px; border-radius: 4px; border: 1px solid #ccc; font-size: 14px;">
+  <button onclick="openPaperByDate()" style="padding: 6px 14px; background-color: #e50914; color: #fff; border: none; border-radius: 4px; font-size: 14px; cursor: pointer; font-weight: bold; margin-left: 5px;">
+    చూడండి
+  </button>
+</div>
+
+<script>
+  const today = new Date().toISOString().split('T')[0];
+  const dateInput = document.getElementById('paperDate');
+  dateInput.value = today;
+  dateInput.max = today;
+
+  function openPaperByDate() {
+    const selectedDate = dateInput.value;
+    if (!selectedDate) {
+      alert("దయచేసి ఒక తేదీని ఎంచుకోండి.");
+      return;
+    }
+    // ఎంచుకున్న తేదీ ప్రకారం ఫైల్ ఓపెన్ అవుతుంది
+    window.open("epaper-" + selectedDate + ".pdf", "_blank");
+  }
+</script>
 
 </body>
 </html>
