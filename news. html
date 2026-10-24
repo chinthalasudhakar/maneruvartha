@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>మానేరువార్త ప్రజాగొంతుక | తాజా వార్తలు</title>
+
+<meta name="description" content="మానేరువార్త ప్రజాగొంతుక తెలుగు వార్తలు. జయశంకర్ భూపాలపల్లి జిల్లా, తెలంగాణ తాజా వార్తలు, గ్రామీణ వార్తలు మరియు ఈ-పేపర్.">
+
+<meta name="keywords" content="మానేరువార్త, Maneru Vartha, భూపాలపల్లి వార్తలు, తెలంగాణ వార్తలు, తెలుగు ఈపేపర్">
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, "Noto Sans Telugu", sans-serif;
+    background: #f1f3f6;
+    color: #222;
+}
+
+header {
+    background: linear-gradient(135deg, #003b8e, #0878d1);
+    color: white;
+    text-align: center;
+    padding: 18px 10px;
+    border-bottom: 5px solid #ffcc00;
+}
+
+.logo {
+    width: 100%;
+    max-width: 760px;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+header h1 {
+    font-size: 30px;
+    margin: 12px 0 5px;
+    color: #ffdf45;
+}
+
+header p {
+    margin: 5px;
+    font-size: 15px;
+}
+
+nav {
+    background: #101820;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav a {
+    color: white;
+    padding: 13px 12px;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+nav a:hover {
+    background: #c40018;
+}
+
+.breaking {
+    background: #fff;
+    border-bottom: 2px solid #ddd;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    overflow: hidden;
+}
+
+.breaking strong {
+    background: #d00000;
+    color: white;
+    padding: 8px;
+    white-space: nowrap;
+}
+
+.breaking span {
+    color: #a00000;
+    font-weight: bold;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 12px;
+}
+
+.welcome {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    border-top: 5px solid #e5b400;
+    margin-bottom: 20px;
+}
+
+.welcome h2 {
+    color: #073b91;
+    margin-top: 0;
+}
+
+.section-title {
+    background: #073b91;
+    color: white;
+    padding: 12px;
+    border-left: 6px solid #ffcc00;
+    font-size: 21px;
+    margin-top: 25px;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+}
+
+.news-card {
+    background: white;
+    padding: 16px;
+    border-radius: 7px;
+    border-bottom: 3px solid #e4b900;
+    box-shadow: 0 2px 7px #ddd;
+}
+
+.news-card h3 {
+    color: #a00000;
+    margin-top: 0;
+}
+
+.news-card p {
+    line-height: 1.8;
+}
+
+.news-card a {
+    display: inline-block;
+    background: #073b91;
+    color: white;
+    padding: 9px 14px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.mandals {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.mandals a {
+    background: white;
+    color: #073b91;
+    padding: 14px 9px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    border-left: 4px solid #e5b400;
+    font-weight: bold;
+}
+
+.mandals a:hover {
+    background: #073b91;
+    color: white;
+}
+
+.epaper {
+    background: white;
+    text-align: center;
+    padding: 22px 12px;
+    border-radius: 8px;
+}
+
+.button {
+    display: inline-block;
+    background: #b40000;
+    color: white;
+    padding: 13px 22px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 5px;
+}
+
+.button.blue {
+    background: #073b91;
+}
+
+footer {
+    background: #101820;
+    color: white;
+    text-align: center;
+    padding: 25px 12px;
+    margin-top: 30px;
+    line-height: 1.8;
+}
+
+footer a {
+    color: #ffdf45;
+}
+
+@media (min-width: 650px) {
+    .news-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .mandals {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 400px) {
+    header h1 {
+        font-size: 24px;
+    }
+
+    nav a {
+        padding: 11px 8px;
+        font-size: 13px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <img class="logo"
+         src="logo.png.png"
+         alt="మానేరువార్త లోగో"
+         onerror="this.style.display='none'">
+
+    <h1>మానేరువార్త</h1>
+    <p>ప్రజాగొంతుక</p>
+    <p>తెలుగు దినపత్రిక | తెలంగాణ వార్తలు</p>
+    <p>🌐 maneruvartha.in</p>
+</header>
+
+<nav>
+    <a href="index.html">హోమ్</a>
+    <a href="#latest">తాజా వార్తలు</a>
+    <a href="#district">జిల్లా వార్తలు</a>
+    <a href="#mandals">మండలాలు</a>
+    <a href="#epaper">ఈ-పేపర్</a>
+</nav>
+
+<div class="breaking">
+    <strong>తాజా వార్తలు</strong>
+    <span>మానేరువార్త ప్రజాగొంతుకకు స్వాగతం</span>
+</div>
+
+<main class="container">
+
+    <section class="welcome">
+        <h2>మానేరువార్త ప్రజాగొంతుకకు స్వాగతం</h2>
+        <p>
+            జయశంకర్ భూపాలపల్లి జిల్లా మరియు తెలంగాణలోని
+            తాజా వార్తలు, ప్రభుత్వ సమాచారం, గ్రామీణ సమస్యలు,
+            విద్య, వ్యవసాయం, ప్రజా సమస్యలు తెలుసుకోండి.
+        </p>
+        <a class="button blue" href="#latest">వార్తలు చదవండి</a>
+        <a class="button" href="#epaper">ఈ-పేపర్ చూడండి</a>
+    </section>
+
+    <h2 class="section-title" id="latest">📰 వార్తల విభాగాలు</h2>
+
+    <div class="news-grid">
+
+        <article class="news-card">
+            <h3>జిల్లా వార్తలు</h3>
+            <p>జయశంకర్ భూపాలపల్లి జిల్లా తాజా పరిణామాలు.</p>
+            <a href="#district">మరిన్ని చూడండి</a>
+        </article>
+
+        <article class="news-card">
+            <h3>ప్రభుత్వ సమాచారం</h3>
+            <p>కలెక్టర్, DPRO మరియు ప్రభుత్వ శాఖల ప్రకటనలు.</p>
+            <a href="#district">మరిన్ని చూడండి</a>
+        </article>
+
+        <article class="news-card">
+            <h3>గ్రామీణ వార్తలు</h3>
+            <p>గ్రామాల్లో జరిగే సంఘటనలు, అభివృద్ధి పనులు, ప్రజా సమస్యలు.</p>
+            <a href="#mandals">మండలాలు చూడండి</a>
+        </article>
+
+    </div>
+
+    <h2 class="section-title" id="district">🏛️ జిల్లా వార్తలు</h2>
+
+    <section class="welcome">
+        <p>
+            భూపాలపల్లి జిల్లా వార్తలు, విద్య, వ్యవసాయం,
+            ఆరోగ్యం, ప్రభుత్వ కార్యక్రమాలు మరియు స్థానిక
+            ప్రజా సమస్యలకు సంబంధించిన వార్తలు ఇక్కడ ప్రచురించబడతాయి.
+        </p>
+        <p>
+            <strong>గమనిక:</strong>
+            తాజా వార్తలను ప్రచురించడానికి ఈ విభాగంలో
+            సంబంధిత వార్తల లింకులు జోడించాలి.
+        </p>
+    </section>
+
+    <h2 class="section-title" id="mandals">🏘️ మండలాల వార్తలు</h2>
+
+    <div class="mandals">
+        <a href="#district">భూపాలపల్లి</a>
+        <a href="#district">చిట్యాల</a>
+        <a href="#district">గణపురం</a>
+        <a href="#district">కాటారం</a>
+        <a href="#district">మహాముత్తారం</a>
+        <a href="#district">మల్హర్ రావు</a>
+        <a href="#district">మొగుళ్లపల్లి</a>
+        <a href="#district">పలిమెల</a>
+        <a href="#district">రేగొండ</a>
+        <a href="#district">టేకుమట్ల</a>
+        <a href="#district">మహాదేవపూర్</a>
+        <a href="#district">గోరికొత్తపల్లి</a>
+        <a href="#district">కాళేశ్వరం</a>
+    </div>
+
+    <h2 class="section-title" id="epaper">📄 మానేరువార్త ఈ-పేపర్</h2>
+
+    <section class="epaper">
+        <h3>ఈరోజు పేపర్ చదవండి</h3>
+        <p>మీరు అప్లోడ్ చేసిన PDF ఈ-పేపర్‌ను ఇక్కడ తెరవవచ్చు.</p>
+        <a class="button" href="epaper.pdf" target="_blank" rel="noopener">
+            ఈ-పేపర్ చదవండి
+        </a>
+    </section>
+
+</main>
+
+<footer>
+    <h2>మానేరువార్త ప్రజాగొంతుక</h2>
+    <p>ప్రజల గొంతుక — ప్రజల కోసం</p>
+    <p>వెబ్‌సైట్: <a href="https://maneruvartha.in">maneruvartha.in</a></p>
+    <p>ఇమెయిల్: maneruvartha@gmail.com</p>
+    <hr>
+    <p>© 2026 మానేరువార్త. సర్వహక్కులు ప్రత్యేకించబడినవి.</p>
+</footer>
+
+</body>
+</html>
